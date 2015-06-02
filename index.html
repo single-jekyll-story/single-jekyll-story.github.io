@@ -15,7 +15,7 @@ layout: default
     <div class="container">
       <h1>Main Page</h1>
 
-      {% for i in (1..2) %}
+      {% for i in (1..(site.story.number_of_pages)) %}
         {% capture storypage %}{% include story/{{i}}.md %}{% endcapture %}
         {{ storypage | markdownify }}
 
