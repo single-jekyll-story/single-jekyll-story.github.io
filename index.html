@@ -1,0 +1,30 @@
+---
+layout: default
+---
+
+<div class="homepage">
+  <section>
+    <div class="banner-wrapper">
+      {% include banner.html %}
+    </div>
+  </section>
+
+
+
+  <section class="sec">
+    <div class="container">
+      <h1>Main Page</h1>
+
+      {% for i in (1..2) %}
+        {% capture storypage %}{% include story/{{i}}.md %}{% endcapture %}
+        {{ storypage | markdownify }}
+
+
+      {% endfor %}
+
+
+    </div>
+  </section>
+</div>
+
+
