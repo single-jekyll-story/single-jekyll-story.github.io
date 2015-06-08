@@ -1,0 +1,34 @@
+<div class="chapters">
+  {% assign chapters = site.pages | sort: 'chapter', 'last' %}
+  {% for chapter in chapters %}
+    <!-- ugly hack to contain only things in /examples -->
+    {% if chapter.path contains 'chapters' %}
+      <section class="section chapter" id="chapter-{{chapter.chapter}}">
+
+        <div class="banner">
+            {% if chapter.banner_url %}
+              <img src="{{chapter.banner_url}}" alt="banner">
+            {% endif %}
+
+            <div class="caption">
+              {% if chapter.banner_caption %}
+                {{chapter.banner_caption | markdownify}}
+              {% endif %}
+            </div>
+        </div>
+
+
+
+        <h2 class="title">
+          <a href="#chapter-{{chapter.chapter}}">
+            {{chapter.chapter}}. {{chapter.title}}
+          </a>
+        </h2>
+
+        <div class="container chapter-content">
+            {{ chapter.content | markdownify }}
+        </div>
+      </section>
+    {% endif %}
+  {% endfor %}
+</div>

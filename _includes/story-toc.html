@@ -1,0 +1,13 @@
+<ul class="toc list list-unstyled">
+  {% assign chapters = site.pages | sort: 'chapter', 'last' %}
+  {% for chapter in chapters %}
+    <!-- ugly hack to contain only things in /examples -->
+    {% if chapter.path contains 'chapters' %}
+        <li>
+          <a href="#chapter-{{chapter.chapter}}">
+            {{chapter.chapter}}. {{chapter.title}}
+          </a>
+        </li>
+    {% endif %}
+  {% endfor %}
+</ul>

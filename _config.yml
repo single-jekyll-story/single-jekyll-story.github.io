@@ -1,23 +1,24 @@
 # Site settings
-title: Your awesome title
-email: your-email@domain.com
+title: Your awesome story title
 description: > # this means to ignore newlines until "baseurl:"
   Write an awesome description for your new site here. You can edit this
   line in _config.yml. It will appear in your document head meta (for
   Google search results) and in your feed.xml site description.
 baseurl: "" # the subpath of your site, e.g. /blog/
-url: "http://yourdomain.com" # the base hostname & protocol for your site
+url: "http://single-jekyll-story.github.io" # the base hostname & protocol for your site
+
+
+email: your-email@domain.com
+linkedin_full_url: https://www.linkedin.com/in/demoaccount
 twitter_username: jekyllrb
-github_username:  jekyll
+github_repo:  single-jekyll-story/single-jekyll-story.github.io
+
+
 
 # Build settings
 markdown: kramdown
-
 sass:
     sass_dir: assets/_sass
 
 
 
-
-story:
-  number_of_pages: 3

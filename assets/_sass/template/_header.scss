@@ -1,12 +1,19 @@
 .site-header{
-  border-bottom: thin solid #ddd;
+  border-bottom: thin solid #333;
   padding-bottom: 0.3em;
   padding-top: 0.3em;
-  background-color: inherit;
+  background-color: black;
+  color: white;
   margin-bottom: 0;
 
   &.navbar, &.navbar-fixed{
     min-height: 10px;
+  }
+
+  .site-title{
+    a:link, a:hover, a:visited{
+      color: white;
+    }
   }
 }
 

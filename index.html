@@ -11,19 +11,26 @@ layout: default
 
 
 
-  <section class="sec">
-    <div class="container">
-      <h1>Main Page</h1>
+  <section>
+      <section class="frontmatter">
+        <div class="container">
+            <div class="intro">
+              {% capture xs %}{% include story-intro.md %}{% endcapture %}
+               {{ xs | markdownify }}
+            </div>
 
-      {% for i in (1..(site.story.number_of_pages)) %}
-        {% capture storypage %}{% include story/{{i}}.md %}{% endcapture %}
-        {{ storypage | markdownify }}
+            <div class="toc">
+              {% include story-toc.html %}
+            </div>
+        </div>
+      </section>
 
 
-      {% endfor %}
+      <section class="story-smush">
+        {% include story-smush.html  %}
+      </section>
 
 
-    </div>
   </section>
 </div>
 

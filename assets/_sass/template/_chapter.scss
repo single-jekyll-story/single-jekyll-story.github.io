@@ -1,0 +1,34 @@
+.chapter{
+    margin-bottom: 2.0em;
+
+
+  .banner{
+    margin-bottom: 1.0em;
+
+    .caption{
+      padding: 0.3em 0.5em 0.5em 0.5em;
+      text-align: center;
+      font-size: 0.8em;
+      color: #777;
+
+    }
+
+    img{
+      width: 100%;
+    }
+  }
+
+  .title{
+    font-size: 2.6em;
+    text-align: center;
+    a:link, a:hover, a:visited{
+      color: inherit;
+    }
+  }
+
+
+  .container.chapter-content{
+    max-width: $chapter-container-width;
+  }
+
+}
